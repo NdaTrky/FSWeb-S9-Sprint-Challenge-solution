@@ -2,14 +2,16 @@
   "name": "fsweb-s9-sprint-challenge",
   "version": "0.0.1",
   "scripts": {
-    "dev": "fkill :9000 :3000 -s && concurrently \"npm:backend\" \"npm:frontend\"",
-    "test": "cross-env NODE_ENV=testing jest",
-    "webpack": "cross-env NODE_ENV=production webpack",
-    "heroku-postbuild": "npm run webpack",
-    "frontend": "webpack serve --open",
-    "backend": "node index.js",
-    "start": "npm run backend"
-  },
+  "dev": "fkill :9000 :3000 -s && concurrently \"npm:backend\" \"npm:frontend\"",
+  "test": "cross-env NODE_ENV=testing jest",
+  "webpack": "cross-env NODE_ENV=production webpack",
+  "heroku-postbuild": "npm run webpack",
+  "frontend": "webpack serve --open",
+  "backend": "node index.js",
+  "start": "npm run backend",
+  "build": "npm run webpack" 
+}
+,
   "devDependencies": {
     "@babel/core": "7.18.2",
     "@babel/plugin-transform-react-jsx": "7.17.12",
@@ -50,7 +52,7 @@
     "yup": "0.32.11"
   },
   "engines": {
-    "node": "16.x",
+    "node": "20.x",
     "npm": "8.x"
   },
   "repository": {
